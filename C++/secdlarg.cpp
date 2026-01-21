@@ -19,4 +19,4 @@ int main(){
     vector<int>arr={12,35,23,38,9};
     cout<<seclarg(arr);
     return 0;
-}
+} 
