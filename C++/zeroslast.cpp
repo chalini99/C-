@@ -11,7 +11,7 @@ void pushzero(vector<int> &arr){
       arr[count++]=0;
 }
 int main(){
-    vector<int> arr={1,2,0,3,0,4,5,0,7};
+    vector<int> arr={9,2,0,3,0,4,5,0,7};
     pushzero(arr);
     for (int num : arr){
         cout<<num<<" ";
