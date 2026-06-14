@@ -1,0 +1,75 @@
+#include <iostream>
+using namespace std;
+int min(vector<int>& arr){
+  int min=arr[0];
+  for (int i=1; i<arr.size(); i++){
+     if (arr[i]<min){
+        min= arr[i];
+     }
+  }
+return min;
+}
+
+
+int even(vector<int>& arr){
+  int count=0;
+  for (int i=0; i<arr.size(); i++){
+      if (arr[i]%2==0){
+         count++;
+       }
+  }
+  return count;
+}
+
+
+int positive(<vector>int& arr){
+   int count=0;
+   for (int i=0; i<arr.size(); i++){
+       if(arr[i]>0){
+          count++;
+       }
+   }
+   return count;
+}
+
+
+int positivesum(vector<int>& arr){
+   int sum = 0;
+   for (int i=0; i<arr.size(); i++){
+      if (arr[i] >0){
+        sum= sum+ arr[i];
+      }
+      
+   }
+   return sum;
+}
+
+
+
+int positive(vector<int>& arr){
+   int maxi=0;
+   for (int i=0; i<arr.size(); i++){
+      if (arr[i] >0 && arr[i]> maxi){
+         maxi= arr[i];
+      }
+   }
+   return maxi;
+}
+
+
+FREQUENCY
+
+unordered_map<int,int> freq;
+for (int i=0; i<arr.size(); i++){
+    freq[arr[i]]++;
+}
+
+
+
+
+
+
+
+
+
+
