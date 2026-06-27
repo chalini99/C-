@@ -29,4 +29,4 @@ int main(){
 
     cout << middle(&n1);
 
-}
+} 
