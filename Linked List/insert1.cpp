@@ -4,13 +4,11 @@ struct ListNode {
     int val;
     ListNode* next;
 };
-ListNode* deleteFirst(ListNode* head){
-    if (head == NULL){
-        return NULL;
-    }
-    ListNode* temp = head;
-    head = head->next;
-    delete temp;
+ListNode* insertFirst(ListNode* head,int value){
+    ListNode* newNode = new ListNode();
+    newNode->val = value;
+    newNode->next=head;
+    head=newNode;
     return head;
 }
 void printlist(ListNode* head){
@@ -36,12 +34,12 @@ int main()
 
     ListNode* head = n1;
 
-    cout << "Before deleting:\n";
+    cout << "Before inserting:\n";
     printlist(head);
 
-    head = deleteFirst(head);
+    head = insertFirst(head, 1);
 
-    cout << "After deleting:\n";
+    cout << "After inserting:\n";
     printlist(head);
 
     return 0;
