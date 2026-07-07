@@ -46,3 +46,13 @@ int sum(ListNode* head)
     }
     return sum;
 }
+
+void reversePrint(SinglyLinkedListNode* head) {
+         
+    if(head == NULL)
+        return;
+
+    reversePrint(head->next);
+
+    cout << head->data << endl;
+}
