@@ -8,14 +8,14 @@ int removeduplic(vector<int>& arr){
         if(arr[j] != arr[i]){
             i++;
             arr[i] = arr[j]; //putting the new unique element to the next psition of the list
-            
+
         }
     }
     return i+1;
 }
 int main() {
 
-    vector<int> arr = {1, 1, 2, 2, 3, 4, 4};
+    vector<int> arr = {1,1,2,2,3,4,4};
 
     int k = removeduplic(arr);
 
