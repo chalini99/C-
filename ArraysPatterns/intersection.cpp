@@ -19,7 +19,7 @@ vector<int> intersec(vector<int> arr1, vector<int> arr2) {
 }
 int main() {
 
-    vector<int> arr1 = {1, 2, 2, 3, 4};
+    vector<int> arr1 = {1, 2, 6, 3, 4};
     vector<int> arr2 = {2, 2, 4, 5};
 
     vector<int> result = intersec(arr1, arr2);
