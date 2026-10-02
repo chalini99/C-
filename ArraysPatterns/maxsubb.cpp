@@ -4,7 +4,7 @@ using namespace std;
 
 int maxsubarr(vector<int> arr){
     int currsum = 0;
-    int maxsum = arr[0];
+    int maxsum = 0;
     for (int i=0; i<arr.size(); i++){
         currsum += arr[i];
         maxsum = max(maxsum, currsum);
