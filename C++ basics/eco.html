@@ -1,0 +1,92 @@
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      @keyframes glow {
+        0%, 100% { box-shadow: 0 0 5px #11d452, 0 0 10px #11d452, 0 0 15px #11d452; }
+        50% { box-shadow: 0 0 20px #11d452, 0 0 30px #11d452, 0 0 40px #11d452; }
+      }
+      .animate-glow {
+        animation: glow 3s ease-in-out infinite;
+      }
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+      }
+      .animate-float {
+        animation: float 4s ease-in-out infinite;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#0D1A16]">
+<div class="relative flex size-full min-h-screen flex-col bg-[#0D1A16] dark justify-between group/design-root overflow-x-hidden" style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
+<div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#11d452]/10 via-transparent to-transparent z-0"></div>
+<div class="relative z-10">
+<header class="flex items-center p-4 pb-2 justify-between">
+<h1 class="text-white text-2xl font-bold leading-tight tracking-[-0.015em] flex-1 text-center">EcoVerse</h1>
+<div class="flex w-12 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 bg-transparent text-white gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
+<span class="material-symbols-outlined text-3xl">
+                settings
+              </span>
+</button>
+</div>
+</header>
+<div class="px-4 py-3">
+<div class="relative w-full flex flex-col justify-end overflow-hidden min-h-80">
+<div class="absolute inset-0 bg-center bg-no-repeat bg-cover rounded-xl" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD1MfFjQdWV6q823jLCsH9P_is9QWhkIjX9THfcRjmL3JUDv-ygVk-RQGYJ5M43XjwV8ggl_uzhit9y26pq4MLVFSL2jgRacT_Zs14boweROaQhmqLovSGz7mwODNFR__BfleAz2xfvybJi5H52iDgi1trqY-bhsBIo9epUddvMM7YdVo5scZFtMc07m5URgqPjU2hcgnSv0gr34tWbZ4RU770xuk7RX6r29LM6yISpxqU64bJxtnpRMCL9Ozyy4KIPKIre2fFeqII");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0D1A16] via-[#0D1A16]/50 to-transparent"></div>
+<div class="relative flex justify-center animate-float pb-4">
+<img alt="EcoVerse Mascot" class="h-40 w-40 drop-shadow-[0_10px_15px_rgba(17,212,82,0.3)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHY4TRgrGqzrRo2aTRqXQ3sJeXR-aOBqD4T3sJMcZA6vmSitk6yF-HZELwHHL59PtVBJAjhxg0-mJIoNiWyx2vGtARhOGmj9WyG7W6noBFnfg0tc2_oxVgdDq0crNZSqgEuHxYpDaJ6rFZ-_IuyRjW0eb3K_Fh_T1axPwSxpNY8Kk3UkKhPAFU_CUXJjbk-5Rt_0xQI9j8ORnMbg8xcQHhW_WFPZ3DgfHX5uDqEjY7fipdUN56Wj0JsDWrQ6pNWVkHSiAWFgbyeY8"/>
+</div>
+</div>
+</div>
+<main class="px-6 text-center -mt-8 relative z-10">
+<h2 class="text-white text-3xl font-bold leading-tight tracking-tighter">Embark on Your EcoHero Journey</h2>
+<p class="text-gray-300 text-lg font-normal leading-normal mt-4">
+                Dive into EcoVerse, where learning transforms into an epic adventure. Become a guardian of our planet.
+            </p>
+</main>
+<div class="flex px-6 pt-8 pb-4">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-14 px-5 flex-1 bg-[#11d452] text-[#0D1A16] text-lg font-bold leading-normal tracking-[0.015em] animate-glow hover:bg-[#0fd149] transition-all duration-300 transform hover:scale-105">
+<span class="truncate">Start Your Adventure</span>
+</button>
+</div>
+</div>
+<footer class="relative z-10 mt-auto">
+<div class="flex gap-2 border-t border-[#28392e] bg-[#16221B] px-4 pb-4 pt-3">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 rounded-full text-[#11d452]" href="#">
+<span class="material-symbols-outlined text-3xl">home</span>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-[#9db9a6]" href="#">
+<span class="material-symbols-outlined text-3xl">explore</span>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Missions</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-[#9db9a6]" href="#">
+<span class="material-symbols-outlined text-3xl">park</span>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">EcoBase</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-[#9db9a6]" href="#">
+<span class="material-symbols-outlined text-3xl">groups</span>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Community</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-[#9db9a6]" href="#">
+<span class="material-symbols-outlined text-3xl">person</span>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Profile</p>
+</a>
+</div>
+</footer>
+</div>
+
+</body></html>
