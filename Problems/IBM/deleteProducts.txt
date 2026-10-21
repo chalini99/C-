@@ -1,0 +1,122 @@
+# Delete Products
+
+## Problem Statement
+
+You are given an array of integers `IDs` of size `N`, where each integer represents the ID of an item in a bag.
+
+You are allowed to remove **at most `M` items** from the bag. Your task is to minimize the number of distinct IDs remaining in the bag after performing the deletions.
+
+Return the minimum possible number of distinct IDs remaining.
+
+## Function Description
+
+Complete the function:
+
+```cpp
+int deleteProducts(vector<int> IDs, int M);
+```
+
+The function accepts the following parameters:
+
+- `IDs`: An integer array representing the IDs of the items.
+- `M`: The maximum number of items that can be removed.
+
+**Returns:** An integer representing the minimum possible number of distinct IDs remaining after at most `M` deletions.
+
+## Example
+
+**Input:**
+
+```text
+N = 6
+IDs = [1, 1, 1, 2, 3, 2]
+M = 2
+```
+
+**Output:**
+
+```text
+2
+```
+
+## Explanation
+
+Initially, the bag contains six items with three distinct IDs:
+
+- ID `1` occurs 3 times.
+- ID `2` occurs 2 times.
+- ID `3` occurs 1 time.
+
+We can remove at most two items.
+
+One optimal approach is to remove the single item with ID `3` and one item with ID `2`. The remaining items are:
+
+```text
+[1, 1, 1, 2]
+```
+
+There are two distinct IDs remaining: `1` and `2`.
+
+Therefore, the minimum possible number of distinct IDs is `2`.
+
+## Constraints
+
+- `1 <= N <= 10^5`
+- `1 <= IDs[i] <= 10^6`
+- `0 <= M <= N`
+
+## Expected Approach
+
+Use a greedy algorithm:
+
+1. Count the frequency of each ID using a hash map.
+2. Store the frequencies in a vector.
+3. Sort the frequencies in ascending order.
+4. Remove IDs with the smallest frequencies first, subtracting their frequencies from `M`.
+5. Stop when the remaining deletion budget is insufficient to remove the next complete ID.
+6. Return the number of distinct IDs remaining.
+
+**Time Complexity:** `O(N + K log K)` average, where `K` is the number of distinct IDs.
+
+**Space Complexity:** `O(N)`.
+
+
+
+
+solution:
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int deleteProducts(vector<int>& ids, int m) {
+    unordered_map<int, int> freq;
+
+    // Count frequency of each product ID
+    for (int id : ids) {
+        freq[id]++;
+    }
+
+    // Collect frequencies of distinct IDs
+    vector<int> counts;
+    counts.reserve(freq.size());
+
+    for (const auto& [id, count] : freq) {
+        counts.push_back(count);
+    }
+
+    // Remove IDs with the smallest frequencies first
+    sort(counts.begin(), counts.end());
+
+    int distinct = counts.size();
+
+    for (int count : counts) {
+        if (m >= count) {
+            m -= count;
+            distinct--;
+        } else {
+            break;
+        }
+    }
+
+    return distinct;
+}
