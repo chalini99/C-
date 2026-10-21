@@ -1,0 +1,76 @@
+Complete question: Trading Platform
+Problem statement
+A trading platform processes a sequence of events to track a firm's net profit or loss over time.
+
+Each event is one of the following:
+- BUY stock quantity: Buy the given number of shares of a stock at its current market price.
+- SELL stock quantity: Sell the given number of shares of a stock at its current market price.
+- CHANGE stock amount: Change the stock's market price by the given amount, which can be positive or negative.
+- QUERY: Return the current net profit or loss since trading began.
+Process all events in the order given and return a list of values produced by the QUERY events, in the same order.
+Function description
+Complete the function:
+vector<long> getNetProfit(vector<string> events);
+
+
+Input: A vector of strings, events, where each string represents one event.
+
+Returns: A vector of long integers containing the profit or loss for each QUERY event.
+Example
+Input events:
+BUY GOOGL 20
+BUY AAPL 50
+CHANGE GOOGL 6
+QUERY
+SELL AAPL 10
+CHANGE AAPL -2
+QUERY
+
+
+Output:
+[120, 40]
+
+
+2. Understand what the question is asking
+The key is that we track the change in profit caused by price changes, multiplied by the number of shares currently held.
+
+We need to keep track of three things:
+1. The quantity of each stock we currently own.
+2. The cumulative profit or loss caused by stock price changes.
+3. The profit value whenever a QUERY event occurs.
+We don't need to calculate the entire portfolio value from scratch after every event.
+3. Proper approach: Hash Map + Running Profit
+
+
+solution
+vector<long> getNetProfit(vector<string> events){
+  unordered_map<string, long long> quantity;
+    long long profit = 0;
+    vector<long long> result;
+
+    for (const string& event : events) {
+        stringstream ss(event);
+        string action, stock;
+        long long value;
+
+        ss >> action;
+
+        if (action == "BUY") {
+            ss >> stock >> value;
+            quantity[stock] += value;
+        }
+        else if (action == "SELL") {
+            ss >> stock >> value;
+            quantity[stock] -= value;
+        }
+        else if (action == "CHANGE") {
+            ss >> stock >> value;
+            profit += quantity[stock] * value;
+        }
+        else if (action == "QUERY") {
+            result.push_back(profit);
+        }
+    }
+
+    return result;
+}
