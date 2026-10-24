@@ -15,8 +15,16 @@ Output:
 2
 1
 0
-
-vector<int> matchingStrings(vector<string> stringList, vector<string) queries{
-    
+vector<int> matchingStrings(vector<string> stringList, vector<string> queries){
+    unordered_map<string , int> freq;
+    for(const string& str: stringList){
+        freq[str]++;
+    }
+    vector<int> result;
+    result.reserve(queries.size())
+    for(const string& query: queries){
+        result.push_back(freq[query]);
+    }
+    return result;
 
 }
