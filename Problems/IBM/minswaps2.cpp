@@ -25,3 +25,17 @@ Otherwise:
 
 
 Return swaps.
+
+
+int minimumSwaps(vector<int> arr){
+    int n=arr.size();
+    int swaps=0;
+    for (int i=0; i<n; i++){
+        while(arr[i] != i+1){
+            int corretindex = arr[i]-1;
+            swap(arr[i], arr[correctindex]);
+            swaps++;
+        }
+    }
+    return swaps;
+}
