@@ -2,15 +2,9 @@ Understand the approach
 
 Initialize swaps = 0.
 
-
-
 Traverse the array using index i from 0 to n-1.
 
-
-
 The correct position of a value x is index x - 1.
-
-
 
 If arr[i] == i + 1, the element is already in the correct position. Move to the next index.
 
