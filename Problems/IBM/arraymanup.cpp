@@ -18,8 +18,8 @@ queries = [
 
 
 long arrmanipul(int n, vector<vector<int>> queries){
-    vector<long> diff(n+2,0);
-    for (auto q:queries){
+    vector<long> diff(n+2,0);// n+2 because we are using 1 based indexing and we need to handle b+1 index
+    for (auto q:queries){ // avoids copying each query during iteration
         int a = q[0];
         int b = q[1];
         int k = q[2];
@@ -29,7 +29,7 @@ long arrmanipul(int n, vector<vector<int>> queries){
     }
     long sum=0;
     long maxi=0;
-    for(int i=1; i<=0; i++){
+    for(int i=1; i<=n; i++){
         sum += diff[i];
         maxi = max(maxi,sum);
     }
